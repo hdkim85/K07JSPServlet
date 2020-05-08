@@ -9,6 +9,7 @@ import java.util.Map;
 
 
 public class MemberDAO {
+	
 	//멤버변수(클래스 전체의 멤버메소드에서 접근가능)
 	Connection con;
 	PreparedStatement psmt;
