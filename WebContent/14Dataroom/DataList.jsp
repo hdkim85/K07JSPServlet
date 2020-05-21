@@ -77,10 +77,11 @@
 					
 					<!-- 리스트반복 start -->
 				<tr>
+				<!-- 가상번호 -->
 					<td class="text-center">${map.totalCount - (((map.nowPage-1)*map.pageSize) + loop.index) }</td>
 					<td class="text-left">
 					<a href="../DataRoom/DataView?idx=${row.idx
-						}&nowPage=${param.nowPage }">
+						}&nowPage=${param.nowPage }&searchColumn=${param.searchColumn }&searchWord=${param.searchWord }">
 								${row.title }
 							</a>
 					</td>
@@ -96,10 +97,9 @@
 					<td class="text-center">
 					<c:if test="${not empty row.attachedfile }">
 							<a href="./Download?filename=${row.attachedfile }&idx=${row.idx }">
-										<img src="../images/disk.png" width="20" alt="" />
+								<img src="../images/disk.png" width="20" alt="" />
 							</a>
-							</c:if>
-					<i class="material-icons" style="font-size:20px">attach_file</i></td>
+					</c:if>
 				</tr>
  				<!-- 리스트반복 end -->
 					
@@ -158,13 +158,13 @@
 			<div class="row mt-3">
 				<div class="col">
 					<!-- 페이지번호 기본이미지 -->
-					<div style="text-align:center;padding:0 0 10px 0;">
-						
-					</div>
+					<%-- <div style="text-align:center;padding:0 0 10px 0;">
+						${map.pagingImg }
+					</div> --%>
 	
 					<!-- 페이지번호 부트스트랩4 적용 -->
 					<ul class='pagination justify-content-center'>
-						
+						${map.pagingImg }
 					</ul>
 				</div>				
 			</div>		

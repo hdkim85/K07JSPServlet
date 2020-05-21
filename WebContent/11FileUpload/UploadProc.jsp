@@ -32,7 +32,7 @@ String encoding = "UTF-8";
 	Ex) apple.png, apple1.png, apple2.png... 와 같은 형태로 이름을
 		부여한다.
 */
-FileRenamePolicy policy = new DefaultFileRenamePolicy();
+FileRenamePolicy policy = new DefaultFileRenamePolicy();//파일중복명처리
 
 //전송된 폼값을 저장하기 위한 변수생성
 MultipartRequest mr = null;
